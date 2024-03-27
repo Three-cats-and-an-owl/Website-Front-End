@@ -4,7 +4,16 @@ import Header from '../components/Header'
 
 const Home = () => {
   return (
-    <Header/>
+    <div style={{ backgroundColor: '#D1C3B8', minHeight: '100vh' }}>
+      <Header />
+      <Container>
+        <Row>
+          <Col>
+            
+          </Col>
+        </Row>
+      </Container>
+    </div>
   )
 }
 
