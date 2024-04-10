@@ -3,8 +3,8 @@ import Footer from '../components/Footer'
 
 import Carousel from 'react-bootstrap/Carousel'
 import pic from '../assets/pictures/home_page_imageoverlay.jpg'
-import pic2 from '../assets/pictures/stock-homepage.jpg'
-import pic3 from '../assets/pictures/coconut.jpg'
+import pic2 from '../assets/pictures/stock-homepageoverlay-dark.jpg'
+import pic3 from '../assets/pictures/coconut-dark.jpg'
 
 import './Home.css'
 
@@ -42,8 +42,8 @@ const Home = () => {
                   alt="Third slide"
                 />
                 <Carousel.Caption>
-                  <div className="t1">Third slide label</div>
-                  <div className="t2">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</div>
+                  <div className="t1">Save your skin and the planet</div>
+                  <div className="t2">Sustainable, carbon-negative production and manufacturing.</div>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
