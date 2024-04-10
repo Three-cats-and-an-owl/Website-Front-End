@@ -7,7 +7,7 @@
         <style>
             body {
 
-                font-family: Baskerville, sans-serif; //will change later
+                font-family: Bakerville, sans-serif; //will change later
                 margin: 0;
                 padding 0;
                 background-color:#D1C3B8 ; //neutral base background
