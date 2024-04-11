@@ -1,0 +1,17 @@
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+.body {
+    font-family: "Baskerville", sans-serif;
+    color: #d1c3b8
+    
+    
+}
+
+.header {
+    font-family: 'Baskerville', sans-serif;
+    color: #e4ddd5
+    text-align: center;
+    padding: 20px;
+}
