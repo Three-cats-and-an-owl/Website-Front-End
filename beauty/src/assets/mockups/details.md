@@ -65,5 +65,5 @@ Niacinamide 10% + Zinc 1%\
 \
 Natural Moisturizing Factors + 
 HA\
-6.35 USD\
+6.35 USD
 
