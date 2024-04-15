@@ -43,6 +43,11 @@ baskerville
 - black: #000000
 - white: #FFFFFF
 
+### Search side tab
+- white: #FFFFFF
+- black: #000000
+- light grey: #AFAFAF
+
 ## Text 
 
 ### About Page 
