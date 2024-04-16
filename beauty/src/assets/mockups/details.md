@@ -48,6 +48,14 @@ baskerville
 - black: #000000
 - light grey: #AFAFAF
 
+### Account page 
+- white: #FFFFFF
+- black: #000000
+- light grey: #AFAFAF
+- dark grey: #5D5B5B
+- red: #843939
+- light neutral base: #E4DDD5
+
 ## Text 
 
 ### About Page 
@@ -71,4 +79,20 @@ Niacinamide 10% + Zinc 1%\
 Natural Moisturizing Factors + 
 HA\
 6.35 USD
+
+### Account page 
+Profile\
+First Name\
+Last Name\
+example@aabb.com\
+Password\
+\
+Orders\
+No orders have been placed.\
+\
+Addresses\
+Add new address\
+\
+Payment\
+Add new payment
 
