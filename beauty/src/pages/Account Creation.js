@@ -12,7 +12,9 @@ import {Stack} from "react-bootstrap";
 
 const AccountCreation = () => {
         return (
-            <div className="split-page">
+            <div className="Account">
+                <Header/>
+                <div className="split-page">
                 <Form className="left-section">
                     <Stack gap={3}>
                         <div className="h2">
@@ -21,14 +23,14 @@ const AccountCreation = () => {
                         <div className="p">
                             <Form.Text className="button">
                                 Have an account?
-                                <Link to="/AccountLogin"><Button variant="link">Login here.</Button></Link>
+                                <Link to="/Account"><Button variant="link">Login here.</Button></Link>
                             </Form.Text>
                         </div>
                     </Stack>
                 </Form>
                 <Form className="right-section">
                     <Row className="login-container">
-                        <Form.Text className="body">
+                        <Form.Text>
                             Please fill in the following fields to create your account:
                         </Form.Text>
                         <Form.Group  controlId="firstName">
@@ -52,6 +54,7 @@ const AccountCreation = () => {
                         </Button>
                     </Row>
                 </Form>
+                </div>
             </div>
         );
 

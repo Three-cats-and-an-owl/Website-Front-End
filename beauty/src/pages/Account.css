@@ -1,15 +1,8 @@
 
 /* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-html, body {
-    height: 100%;
-    margin: 0;
-}
+
+
 /* Global Styles */
 body {
     font-family: Baskerville, sans-serif;
@@ -31,6 +24,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Baskerville, sans-serif;
+    color: #564a44;
+    line-height: 1.6;
 }
 
 .right-section {
@@ -50,6 +46,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Baskerville, sans-serif;
+    color: #564a44;
+    line-height: 1.6;
 }
 
 h2 {
@@ -58,7 +57,10 @@ h2 {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="firstName"],
+input[type="lastName"],
+input[type="email"]{
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;

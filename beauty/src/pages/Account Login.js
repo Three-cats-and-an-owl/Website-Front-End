@@ -7,6 +7,7 @@ import './Account.css';
 
 const AccountLogin = () => {
     return (
+        // Login form
             <Form>
                 <Row className="login-container">
                     <Form.Group  controlId="formBasicEmail">
@@ -21,8 +22,8 @@ const AccountLogin = () => {
                         Submit
                     </Button>
 
+                    {/*Button that redirects to the Account Creation page*/}
                     <Form.Text className="button">
-
                         Don't have an account?
                         <Link to="/AccountCreation"><Button variant="link">Create one here.</Button></Link>
                     </Form.Text>
