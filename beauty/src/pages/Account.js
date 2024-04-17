@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import AccountLogin from './Account Login'
+// import AccountCreation from "./Account Creation";
 
 const Account = () => {
   return (
@@ -9,8 +10,9 @@ const Account = () => {
         <Header/>
         <Container>
             <Row>
-                Account Page
+                {/*Account Page*/}
                 <AccountLogin/>
+                {/*<AccountCreation/>*/}
             </Row>
         </Container>
     </div>  )
