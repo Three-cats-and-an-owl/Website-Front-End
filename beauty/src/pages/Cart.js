@@ -11,6 +11,7 @@ const Cart = () => {
             trigger="click"
             placement="right"
             title="Cart">
+                There are <strong>0</strong> items in your cart. 
         </Popover>
     </div>
   )
