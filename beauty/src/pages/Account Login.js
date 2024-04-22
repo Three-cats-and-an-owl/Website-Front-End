@@ -1,18 +1,35 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
+import Row from 'react-bootstrap/Row';
 
-import './Account.css'
+import './Account.css';
 
 const AccountLogin = () => {
     return (
-        <div className="Account Login">
-            <Header/>
-            <Container>
-                <Row>
-                    Account Login Page
-                </Row>
-            </Container>
-        </div>  )
-}
+        // Login form
+            <Form>
+                <Row className="login-container">
+                    <Form.Group  controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" placeholder=""/>
+                    </Form.Group>
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder=""/>
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
 
-export default AccountLogin
+                    {/*Button that redirects to the Account Creation page*/}
+                    <Form.Text className="button">
+                        Don't have an account?
+                        <Link to="/AccountCreation"><Button variant="link">Create one here.</Button></Link>
+                    </Form.Text>
+                </Row>
+            </Form>
+    );
+}
+export default AccountLogin;
+
