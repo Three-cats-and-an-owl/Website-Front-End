@@ -47,7 +47,7 @@ const Search = () => {
         {products.map((product, index) => (
             <Col xs={12} md={4} key={index}>
             <Card>
-                <Card.Img variant="top" src={`https://source.unsplash.com/900x1600/?${searchTerm}?sig=${index}`} style={{maxHeight: '60vh', maxWidth: '20wh', objectFit: 'cover'}} />
+                <Card.Img variant="top" src={`https://source.unsplash.com/2500x2000?${searchTerm}?sig=${index}`} style={{maxHeight: '60vh', maxWidth: '20wh', objectFit: 'cover'}} />
                 <Card.Body>
                 <Card.Title as="div">
                     <strong>{product.productName}</strong>
