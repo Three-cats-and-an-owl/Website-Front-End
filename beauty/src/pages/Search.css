@@ -1,0 +1,12 @@
+.search-button {
+    background-color: #e4ddd5;
+    color: black;
+    font-family: Baskerville;
+    padding: 5px 50px 5px 50px;
+    border-radius: 20px;
+  }
+  
+  .search-button:hover {
+    background-color:grey;
+    color: white;
+  }

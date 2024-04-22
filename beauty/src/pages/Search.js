@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Container, Form, Button, Card, Row, Col } from 'react-bootstrap';
 
 import Header from '../components/Header';
+import './Search.css';
 
 const Search = () => {
 
@@ -38,18 +39,20 @@ const Search = () => {
             onChange={handleInputChange} 
             />
         </Form.Group>
-        <Button variant="secondary" type="submit">Search</Button>
+        <br></br>
+        <Button variant="secondary" className=" btn-lg search-button" style={{backgroundColor: "#e4ddd5", color: "black", fontFamily: "Baskerville"}}type="submit">Search</Button>
         </Form>
 
         <Row>
         {products.map((product, index) => (
-            <Col key={index} sm={12} md={6} lg={4} xl={3}>
-            <Card className="my-3 p-3 rounded">
+            <Col xs={12} md={4} key={index}>
+            <Card>
+                <Card.Img variant="top" src={`https://source.unsplash.com/900x1600/?${searchTerm}?sig=${index}`} style={{maxHeight: '60vh', maxWidth: '20wh', objectFit: 'cover'}} />
                 <Card.Body>
                 <Card.Title as="div">
                     <strong>{product.productName}</strong>
                 </Card.Title>
-                <Card.Text as="div">{product.productType}</Card.Text>
+                {/* <Card.Text as="div">{product.productType}</Card.Text> */}
                 <Card.Text as="div">${product.price}</Card.Text>
                 </Card.Body>
             </Card>
@@ -58,27 +61,7 @@ const Search = () => {
         </Row>
     </Container>
     </div>
-    // <div className="search">
-    //     <Header/>
-    //     <form onSubmit={handleSubmit}>
-    //     <input
-    //       type="text"
-    //       placeholder="Search for a product"
-    //       value={searchTerm}
-    //       onChange={handleInputChange}
-    //     />
-    //     <button type="submit">Search</button>
-    //   </form>
-
-    //   {products.map((product, index) => (
-    //     <div key={index}>
-    //       <h2>{product.productName}</h2>
-    //       <p>{product.productType}</p>
-    //       <p>{product.price}</p>
-    //     </div>
-    //   ))}                
-    // </div>
   )
 }
 
-export default Search
+export default Search;

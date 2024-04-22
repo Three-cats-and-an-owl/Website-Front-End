@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from '../components/Header';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
 const Inventory = () => {
   const [items, setItems] = useState([]);
@@ -27,14 +27,24 @@ const Inventory = () => {
   return (
     <div className="Inventory">
       <Header/>
+      <br></br>
       <Container>
-        {items.map((item, index) => (
-          <Row key={index}>
-            <Col>{item.productName}</Col>
-            <Col>{item.productType}</Col>
-            <Col>{item.price}</Col>
-          </Row>
-        ))}
+        <Row>
+          {items.map((item, index) => (
+            <Col xs={12} md={4} key={index}>
+              <Card>
+                <Card.Img variant="top" src={`https://source.unsplash.com/900x1600/?skincare-products?sig=${index}`} style={{maxHeight: '60vh', maxWidth: '20wh', objectFit: 'cover'}} />
+                <Card.Body>
+                  <Card.Title>{item.productName}</Card.Title>
+                  <Card.Text>
+                    {/* Type: {item.productType}<br/> */}
+                    Price: {item.price}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
       </Container>
     </div>
   );
