@@ -1,4 +1,5 @@
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import { Container, Row, Col } from 'react-bootstrap'
 
 import AccountLogin from './Account Login'
@@ -13,6 +14,7 @@ const Account = () => {
                 <AccountLogin/>
             </Row>
         </Container>
+        <Footer/>
     </div>  )
 }
 
