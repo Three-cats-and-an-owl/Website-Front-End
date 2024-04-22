@@ -5,15 +5,24 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const Inventory = () => {
   const [items, setItems] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios('http://localhost:8080/api/v1/products');
-      setItems(result.data);
+      try {
+        const result = await axios('http://localhost:8080/api/v1/products');
+        setItems(result.data);
+      } catch (err) {
+        setError(err);
+      }
     };
 
     fetchData();
   }, []);
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <div className="Inventory">
@@ -21,8 +30,8 @@ const Inventory = () => {
       <Container>
         {items.map((item, index) => (
           <Row key={index}>
-            <Col>{item.product_name}</Col>
-            <Col>{item.product_type}</Col>
+            <Col>{item.productName}</Col>
+            <Col>{item.productType}</Col>
             <Col>{item.price}</Col>
           </Row>
         ))}

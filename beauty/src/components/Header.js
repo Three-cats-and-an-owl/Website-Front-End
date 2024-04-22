@@ -17,7 +17,7 @@ const Header = () => {
           <Button variant="outline-tertiary" style={{ fontFamily: 'Baskerville', fontSize: '1em' }}>SHOP</Button>
         </Nav.Link>
         <Navbar.Brand as={Link} to="/" className="text-center" style={{ fontFamily: 'Baskerville', fontSize: '40px' }}> A.A.B.B Skin   </Navbar.Brand>
-        <Nav.Link as={Link} to="/Inventory" className="text-center" style={{ fontFamily: 'Baskerville' }}>
+        <Nav.Link as={Link} to="/Search" className="text-center" style={{ fontFamily: 'Baskerville' }}>
           <Button variant="outline-tertiary" style={{ fontFamily: 'Baskerville', fontSize: '1em' }}>SEARCH</Button>
         </Nav.Link>
         <Nav.Link as={Link} to="/Account"className="text-center" style={{ fontFamily: 'Baskerville' }}>
