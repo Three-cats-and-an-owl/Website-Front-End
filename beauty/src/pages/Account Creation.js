@@ -1,34 +1,38 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+
 
 import './Account.css';
 import {Link} from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {Stack} from "react-bootstrap";
+import { Container, Row, Col } from 'react-bootstrap';
 
 const AccountCreation = () => {
         return (
+            // Page to create a login account
             <div className="Account">
                 <Header/>
                 <div className="split-page">
                 <Form className="left-section">
                     <Stack gap={3}>
+                        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh'}}>
                         <div className="h2">
                             CREATE ACCOUNT
                         </div>
+
                         <div className="p">
                             <Form.Text className="button">
                                 Have an account?
                                 <Link to="/Account"><Button variant="link">Login here.</Button></Link>
                             </Form.Text>
                         </div>
+                        </Container>
                     </Stack>
                 </Form>
                 <Form className="right-section">
+                    <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh'}}>
                     <Row className="login-container">
                         <Form.Text>
                             Please fill in the following fields to create your account:
@@ -53,6 +57,7 @@ const AccountCreation = () => {
                             Submit
                         </Button>
                     </Row>
+                    </Container>
                 </Form>
                 </div>
             </div>
