@@ -1,12 +1,13 @@
 .search-button {
-    background-color: #e4ddd5;
-    color: black;
-    font-family: Baskerville;
-    padding: 5px 50px 5px 50px;
+    background-color: #e4ddd5 !important;
+    color: black !important;
+    font-family: Baskerville !important;
+    padding: 10px 50px 10px 50px !important;
     border-radius: 20px;
   }
   
   .search-button:hover {
     background-color:grey;
     color: white;
+    box-shadow: 0 0 10px #9ecaed
   }

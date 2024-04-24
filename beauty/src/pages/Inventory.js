@@ -32,8 +32,9 @@ const Inventory = () => {
         <Row>
           {items.map((item, index) => (
             <Col xs={12} md={4} key={index}>
+              <br></br>
               <Card>
-                <Card.Img variant="top" src={`https://source.unsplash.com/900x1600/?skincare-products?sig=${index}`} style={{maxHeight: '60vh', maxWidth: '20wh', objectFit: 'cover'}} />
+                <Card.Img variant="top" src={`https://source.unsplash.com/2800x2000/?skincare-products?sig=${index}`} style={{maxHeight: '60vh', maxWidth: '20wh', objectFit: 'cover'}} />
                 <Card.Body>
                   <Card.Title>{item.productName}</Card.Title>
                   <Card.Text>
