@@ -1,19 +1,20 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
-import pic from '../assets/pictures/home_page_imageoverlay.jpg'
+import Card from 'react-bootstrap/Card';
 
 import { Container, Row, Col } from 'react-bootstrap';
 
 import './Account.css';
+import pic from "../assets/pictures/stock-homepage.jpg";
 
 const AccountLogin = () => {
     return (
-
-        // Login form
-        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh',
-            backgroundImage: "url('https://domf5oio6qrcr.cloudfront.net/medialibrary/7544/724cf5e2-e067-445d-9665-2eb9a0a12c86.jpg')"
-            }}>
+        <Card className="body">
+            <Card.Img src={pic} alt="Card image" />
+            <Card.ImgOverlay>
+       {/*Login form*/}
+        <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh'}}>
             <Form>
                 <Row className="login-container">
                     <Form.Group  controlId="formBasicEmail">
@@ -36,6 +37,8 @@ const AccountLogin = () => {
                 </Row>
             </Form>
         </Container>
+            </Card.ImgOverlay>
+        </Card>
     );
 }
 export default AccountLogin;
