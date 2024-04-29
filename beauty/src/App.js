@@ -5,6 +5,8 @@ import About from './pages/About';
 import Inventory from './pages/Inventory';
 import Account from './pages/Account';
 import Cart from './pages/Cart';
+import Search from './pages/Search';
+import AccountCreation from "./pages/Account Creation";
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />"
+          <Route path="/Search" element={<Search />} />
           <Route path="/Inventory" element={<Inventory />} />
           <Route path="/Account" element={<Account />} />
+          <Route path="/AccountCreation" element={<AccountCreation />} />
           <Route path="/Cart" element={<Cart />} />
         </Routes>
       </Router>
