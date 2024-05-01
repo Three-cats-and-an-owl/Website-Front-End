@@ -1,6 +1,8 @@
 import Header from '../components/Header'
 //import { Container, Row, Col } from 'react-bootstrap' 
-import { Popover } from 'react-bootstrap' 
+import { Container, Popover } from 'react-bootstrap' 
+import ProgressBar from 'react-bootstrap/ProgressBar';
+
 
 const Cart = () => {
   return (
@@ -11,6 +13,9 @@ const Cart = () => {
             trigger="click"
             placement="right"
             title="Cart">
+              <Container>
+                  <ProgressBar now={33} variant ="color"/>
+              </Container>
                 There are <strong>0</strong> items in your cart. 
         </Popover>
     </div>
