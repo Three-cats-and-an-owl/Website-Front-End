@@ -6,6 +6,7 @@ import Inventory from './pages/Inventory';
 import Account from './pages/Account';
 import Cart from './pages/Cart';
 import AccountCreation from "./pages/Account Creation";
+import AccountDisplay from "./pages/Account Display";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/Inventory" element={<Inventory />} />
           <Route path="/Account" element={<Account />} />
           <Route path="/AccountCreation" element={<AccountCreation />} />
+          <Route path="/AccountDisplay" element ={<AccountDisplay />} />
           <Route path="/Cart" element={<Cart />} />
         </Routes>
       </Router>

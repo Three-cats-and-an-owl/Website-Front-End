@@ -1,23 +1,27 @@
-
 /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-
+html, body {
+    height: 100%;
+    margin: 0;
+}
 /* Global Styles */
 body {
     font-family: Baskerville, sans-serif;
     color: #564a44;
     line-height: 1.6;
     background-color: #f9f9f9;
-
 }
-
-
 
 .split-page {
     display: flex;
     height: 100%;
 }
+
 
 .left-section{
     flex: 1;
@@ -26,17 +30,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Baskerville, sans-serif;
-    color: #564a44;
-    line-height: 1.6;
 }
+
 
 .right-section {
     flex: 1;
     padding: 20px;
     background-color: white;
 }
-
 .login-container {
     font-family: Baskerville, sans-serif;
     color: #564a44;
@@ -49,9 +50,24 @@ body {
     border: 3px solid #ccc;
 }
 
+.account-container {
+    font-family: Baskerville, sans-serif;
+    color: #564a44;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 3px auto;
+    background-color: #fff;
+    padding: 15%;
+    border-radius: 5px;
+    border: 5px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Baskerville';
 }
 
 input[type="text"],
@@ -83,17 +99,43 @@ button:hover {
 p {
     text-align: center;
     margin-top: 20px;
+    font-family: 'Baskerville';
 }
 
 p a {
     color: #333;
     text-decoration: none;
+    font-family: 'Baskerville';
 }
 
 p a:hover {
     text-decoration: underline;
 }
 
+.t1 {
+    text-align: center;
+    margin-top: 20px;
+}
 
+.t1 a {
+    color: #333;
+    text-decoration: none;
+}
 
+.t1 a:hover {
+    text-decoration: underline;
+}
 
+.split-page {
+    display: flex;
+    height: calc(100vh);
+}
+
+.left-section, .right-section {
+    flex: 1;
+    height: 100%;
+}
+
+.custom-1 {
+    font-family: 'Baskerville';
+}
