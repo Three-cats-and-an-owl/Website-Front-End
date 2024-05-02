@@ -1,26 +1,42 @@
 import Header from '../components/Header'
-//import { Container, Row, Col } from 'react-bootstrap' 
-import { Container, Popover } from 'react-bootstrap' 
+import { Container, Row } from 'react-bootstrap'
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import './Cart.css'
 
-const Cart = () => {
+  function SideTab() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <div className="Cart">
-        <Header/>
-        <Popover
-            id="cart-tab"
-            trigger="click"
-            placement="right"
-            title="Cart">
-              <Container>
+    <>
+    <Header/>
+      <Button variant="primary" onClick={handleShow}>
+        Cart
+      </Button>
+
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Cart</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+        <Container>
                   <ProgressBar variant ="color" now={33} />
-              </Container>
-                There are <strong>0</strong> items in your cart. 
-        </Popover>
-    </div>
-  )
+        </Container>
+                <Row>There are 0 items in your cart.</Row>
+                <Row>Merchandise Subtotal</Row>
+                <Row>Shipping & Handling</Row> 
+                <Row>Sales Tax</Row>
+                <Row><strong>Estimated Total</strong></Row>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </>
+  );
 }
 
-export default Cart
+export default SideTab;
