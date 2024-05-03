@@ -28,10 +28,16 @@ import './Cart.css'
         <Container>
                   <ProgressBar variant ="color" now={33} />
         </Container>
+                <br></br>
                 <Row>There are 0 items in your cart.</Row>
+                <br></br>
+                <br></br>
                 <Row>Merchandise Subtotal</Row>
+                <br></br>
                 <Row>Shipping & Handling</Row> 
+                <br></br>
                 <Row>Sales Tax</Row>
+                <br></br>
                 <Row><strong>Estimated Total</strong></Row>
                 <Button variant="dark" size="md">
                   Checkout
