@@ -56,6 +56,7 @@ const Search = () => {
                 </Card.Title>
                 {/* <Card.Text as="div">{product.productType}</Card.Text> */}
                 <Card.Text as="div">${product.price}</Card.Text>
+                <Button variant="secondary" className="cart-button">Add to cart</Button>
                 </Card.Body>
             </Card>
             </Col>

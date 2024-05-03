@@ -12,3 +12,9 @@
     color: white;
     box-shadow: 0 0 10px #9ecaed
   }
+
+  .cart-button {
+    color: black;
+    background-color: #564A44 !important;
+    font-family: Baskerville !important;
+  }

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from '../components/Header';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import './Search.css'
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 const Inventory = () => {
   const [items, setItems] = useState([]);
@@ -41,6 +42,7 @@ const Inventory = () => {
                     {/* Type: {item.productType}<br/> */}
                     Price: {item.price}
                   </Card.Text>
+                  <Button variant="secondary" className="cart-button">Add to cart</Button>
                 </Card.Body>
               </Card>
             </Col>
