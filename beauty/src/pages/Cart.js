@@ -1,5 +1,5 @@
 import Header from '../components/Header'
-import { Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
@@ -29,7 +29,9 @@ import './Cart.css'
                   <ProgressBar variant ="color" now={33} />
         </Container>
                 <br></br>
-                <Row>There are 0 items in your cart.</Row>
+                <Row>
+                  <Col>There are 0 items in your cart.</Col>
+                  <Col>$0.00</Col></Row>
                 <br></br>
                 <br></br>
                 <Row>Merchandise Subtotal</Row>
@@ -39,10 +41,11 @@ import './Cart.css'
                 <Row>Sales Tax</Row>
                 <br></br>
                 <Row><strong>Estimated Total</strong></Row>
-                <Button variant="dark" size="md">
+                <Button variant="dark" className="co" size="md">
                   Checkout
                 </Button>
         </Offcanvas.Body>
+
       </Offcanvas>
     </>
   );
