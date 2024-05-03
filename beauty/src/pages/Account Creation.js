@@ -6,6 +6,8 @@ import './Account.css';
 
 const LoginForm = () => (
   <Form className="left-section">
+    <br></br><br></br><br></br><br></br><br></br><br></br>
+    <br></br><br></br><br></br>
     <Stack gap={3}>
       <div className="custom-1 h2">CREATE ACCOUNT</div>
       <div className="custom-1 p">
