@@ -1,5 +1,5 @@
 import Header from '../components/Header'
-import { Container, Row, Col } from 'react-bootstrap' 
+import { Container, Row } from 'react-bootstrap' 
 
 const Cart = () => {
   return (
