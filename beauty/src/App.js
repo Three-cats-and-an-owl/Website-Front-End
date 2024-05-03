@@ -18,7 +18,11 @@ function App() {
           <Route path="/Inventory" element={<Inventory />} />
           <Route path="/Account" element={<Account />} />
           <Route path="/AccountCreation" element={<AccountCreation />} />
+<<<<<<< Updated upstream
           <Route path="/AccountDisplay" element ={<AccountDisplay />} />
+=======
+          <Route path="/AccountDisplay" element={<AccountDisplay />} />
+>>>>>>> Stashed changes
           <Route path="/Cart" element={<Cart />} />
         </Routes>
       </Router>

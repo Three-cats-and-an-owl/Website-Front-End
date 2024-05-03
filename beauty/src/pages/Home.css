@@ -1,0 +1,17 @@
+.t1 {
+    font-size: 4rem;
+    font-family: Baskersville;
+    color: #E4DDD5;
+}
+
+.t2 {
+    font-size: 1.5rem;
+    font-family: Baskersville;
+    color: #E4DDD5;
+}
+
+.home .carousel img{ 
+    height: 80vh;
+    width: auto;
+    object-fit: cover;
+}

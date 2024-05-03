@@ -34,12 +34,12 @@ body {
 
 
 .right-section {
+    font-family: 'Baskerville';
     flex: 1;
     padding: 20px;
     background-color: white;
 }
 .login-container {
-    font-family: Baskerville, sans-serif;
     color: #564a44;
     line-height: 1.6;
     max-width: 400px;
@@ -97,9 +97,9 @@ button:hover {
 }
 
 p {
+    font-family: 'Baskerville';
     text-align: center;
     margin-top: 20px;
-    font-family: 'Baskerville';
 }
 
 p a {
@@ -126,15 +126,15 @@ p a:hover {
     text-decoration: underline;
 }
 
-.split-page {
-    display: flex;
-    height: calc(100vh);
-}
+/*.split-page {*/
+/*    display: flex;*/
+/*    height: calc(100vh);*/
+/*}*/
 
-.left-section, .right-section {
-    flex: 1;
-    height: 100%;
-}
+/*.left-section, .right-section {*/
+/*    flex: 1;*/
+/*    height: 100%;*/
+/*}*/
 
 .custom-1 {
     font-family: 'Baskerville';
