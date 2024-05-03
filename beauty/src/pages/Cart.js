@@ -16,7 +16,7 @@ import './Cart.css'
   return (
     <>
     <Header/>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="secondary" onClick={handleShow}>
         Cart
       </Button>
 
@@ -33,6 +33,9 @@ import './Cart.css'
                 <Row>Shipping & Handling</Row> 
                 <Row>Sales Tax</Row>
                 <Row><strong>Estimated Total</strong></Row>
+                <Button variant="dark" size="md">
+                  Checkout
+                </Button>
         </Offcanvas.Body>
       </Offcanvas>
     </>
