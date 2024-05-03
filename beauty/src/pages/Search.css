@@ -4,6 +4,7 @@
     font-family: Baskerville !important;
     padding: 10px 50px 10px 50px !important;
     border-radius: 20px;
+    border-color: white !important;
   }
   
   .search-button:hover {
