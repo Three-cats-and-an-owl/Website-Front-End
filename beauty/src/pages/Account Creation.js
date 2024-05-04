@@ -11,12 +11,12 @@ const LoginForm = () => (
     <br></br><br></br><br></br><br></br><br></br><br></br>
     <br></br><br></br><br></br>
     <Stack gap={3}>
-      <div className="custom-1 h2">CREATE ACCOUNT</div>
-      <div className="custom-1 p">
+      <div className="custom-2">CREATE ACCOUNT</div>
+      <div className="custom-1">
         <Form.Text className="button">
           Already have an account? 
           <span style={{ marginLeft: '10px'}}>
-            <Button style={{fontFamily: 'Baskerville', backgroundColor: 'black'}} as={Link} to='/Account'>Login</Button>
+            <Button style={{fontFamily: 'Baskerville', backgroundColor: '#D1C3B8', color: 'black', textDecoration: 'none'}} as={Link} to='/Account'>Login</Button>
           </span>
         </Form.Text>
       </div>

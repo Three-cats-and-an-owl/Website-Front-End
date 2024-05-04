@@ -207,8 +207,11 @@ button:hover {
 
 .custom-1 {
     font-family: 'Baskerville';
+    font-size: 160%;
 }
 
 .custom-2 {
+    font-family: Baskerville;
     color: black !important;
+    font-size: 300%;
 }
