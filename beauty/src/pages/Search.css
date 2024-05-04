@@ -18,3 +18,11 @@
     background-color: #564A44 !important;
     font-family: Baskerville !important;
   }
+
+  .featured {
+    font-family: Arial;
+    font-size: 250%;
+    padding: 1%;
+    border-radius: 5px;
+    background-color: #e4ddd580;
+  }

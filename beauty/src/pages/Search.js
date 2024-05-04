@@ -30,18 +30,24 @@ const Search = () => {
     <Header/>
     <br></br><br></br>
     <Container>
-        <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formBasicSearch">
-            <Form.Control 
-            type="text" 
-            placeholder="Search for a product" 
-            value={searchTerm} 
-            onChange={handleInputChange} 
-            />
-        </Form.Group>
         <br></br>
-        <Button variant="secondary" className=" btn-lg search-button" type="submit">Search</Button>
-        </Form>
+        <Row className="justify-content-md-center">
+            <Col xs={12} md={6}>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group controlId="formBasicSearch">
+                        <Form.Control 
+                        type="text" 
+                        placeholder="Search for a product" 
+                        value={searchTerm} 
+                        onChange={handleInputChange} 
+                        size="lg"
+                        />
+                    </Form.Group>
+                    <br></br>
+                    <Button variant="secondary" className=" btn-lg search-button" type="submit" block>Search</Button>
+                </Form>
+            </Col>
+        </Row>
         <br></br>
 
         <Row>
@@ -54,7 +60,6 @@ const Search = () => {
                 <Card.Title as="div">
                     <strong>{product.productName}</strong>
                 </Card.Title>
-                {/* <Card.Text as="div">{product.productType}</Card.Text> */}
                 <Card.Text as="div">${product.price}</Card.Text>
                 <Button variant="secondary" className="cart-button">Add to cart</Button>
                 </Card.Body>

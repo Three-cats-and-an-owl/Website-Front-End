@@ -2,10 +2,20 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Container, Row } from 'react-bootstrap'
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import { useState } from 'react';
 
 const Header = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <Navbar expand="lg" style={{ backgroundColor: '#E4DDD5', height: '9em' }}>
+    <>
+      <Navbar expand="lg" style={{ backgroundColor: '#E4DDD5', height: '9em' }}>
       <div className="d-flex justify-content-between align-items-center w-50 mx-auto">
         <Nav.Link as={Link} to="/" className="text-center" style={{ fontFamily: 'Baskerville' }}>
           <Button variant="outline-tertiary" style={{ fontFamily: 'Baskerville', fontSize: '1em' }}>HOME</Button>
@@ -23,11 +33,37 @@ const Header = () => {
         <Nav.Link as={Link} to="/Account"className="text-center" style={{ fontFamily: 'Baskerville' }}>
           <Button variant="outline-tertiary" style={{ fontFamily: 'Baskerville', fontSize: '1em' }}>ACCOUNT</Button>
         </Nav.Link>
-        <Nav.Link as={Link} to="/Cart" className="text-center" style={{ fontFamily: 'Baskerville' }}>
-          <Button variant="outline-tertiary" style={{ fontFamily: 'Baskerville', fontSize: '1em' }}>CART</Button>
-        </Nav.Link>
+        <div className="text-center" style={{ fontFamily: 'Baskerville' }}>
+  <Button variant="outline-tertiary" style={{ fontFamily: 'Baskerville', fontSize: '1em' }} onClick={handleShow}>CART</Button>
+</div>
       </div>
-    </Navbar>
+      </Navbar>
+
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Cart</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Container>
+            <ProgressBar variant ="color" now={33} />
+          </Container>
+          <br></br>
+          <Row>There are 0 items in your cart.</Row>
+          <br></br>
+          <br></br>
+          <Row>Subtotal</Row>
+          <br></br>
+          <Row>Shipping & Handling</Row> 
+          <br></br>
+          <Row>Sales Tax</Row>
+          <br></br>
+          <Row><strong>Estimated Total</strong></Row>
+          <Button variant="dark" size="md">
+            Checkout
+          </Button>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </>
   )
 }
 

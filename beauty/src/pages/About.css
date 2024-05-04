@@ -1,0 +1,16 @@
+.about-title {
+    font-family: Baskerville;
+    font-size: 350%;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20%;
+
+    font-family: Baskerville;
+    font-size: 150%;
+}
+

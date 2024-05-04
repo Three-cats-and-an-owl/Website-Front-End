@@ -47,7 +47,7 @@ const AccountLogin = () => {
                         
                         <Form.Text className="button">
                             Don't have an account?
-                            <Link to="/AccountCreation"><Button variant="link" classBane="custom-2">Create one here.</Button></Link>
+                            <Link to="/AccountCreation"><Button variant="link" className="custom-2">Create one here.</Button></Link>
                         </Form.Text>
                         <Form.Text className="button">
                             <Link to="/AccountDisplay"><Button variant="link">.</Button></Link>
