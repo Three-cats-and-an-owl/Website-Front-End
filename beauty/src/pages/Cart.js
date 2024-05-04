@@ -20,7 +20,7 @@ import './Cart.css'
         Cart
       </Button>
 
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas className="txt" show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Cart</Offcanvas.Title>
         </Offcanvas.Header>
@@ -29,19 +29,31 @@ import './Cart.css'
                   <ProgressBar variant ="color" now={33} />
         </Container>
                 <br></br>
+                <Row><h6>There are <strong>0</strong> items in your cart.</h6></Row>
+                <hr></hr>
+                <br></br>
                 <Row>
-                  <Col>There are 0 items in your cart.</Col>
-                  <Col>$0.00</Col></Row>
+                  <Col>Merchandise Subtotal</Col>
+                  <Col align="right">$0.00</Col>
+                </Row>
                 <br></br>
+                <Row>
+                  <Col>Shipping & Handling</Col>
+                  <Col align="right">$0.00</Col>
+                </Row> 
                 <br></br>
-                <Row>Merchandise Subtotal</Row>
+                <Row>
+                  <Col>Sales Tax</Col>
+                  <Col align="right">$0.00</Col>
+                </Row>
                 <br></br>
-                <Row>Shipping & Handling</Row> 
+                <hr></hr>
+                <Row>
+                  <Col><strong>Estimated Total</strong></Col>
+                  <Col align="right"><strong>$0.00</strong></Col>
+                </Row>
                 <br></br>
-                <Row>Sales Tax</Row>
-                <br></br>
-                <Row><strong>Estimated Total</strong></Row>
-                <Button variant="dark" className="co" size="md">
+                <Button variant="dark" size="md">
                   Checkout
                 </Button>
         </Offcanvas.Body>
