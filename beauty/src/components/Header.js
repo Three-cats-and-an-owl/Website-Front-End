@@ -40,29 +40,30 @@ const Header = () => {
       </Navbar>
 
       <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Cart</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <Container>
-            <ProgressBar variant ="color" now={33} />
-          </Container>
-          <br></br>
-          <Row>There are 0 items in your cart.</Row>
-          <br></br>
-          <br></br>
-          <Row>Subtotal</Row>
-          <br></br>
-          <Row>Shipping & Handling</Row> 
-          <br></br>
-          <Row>Sales Tax</Row>
-          <br></br>
-          <Row><strong>Estimated Total</strong></Row>
-          <Button variant="dark" size="md">
-            Checkout
-          </Button>
-        </Offcanvas.Body>
-      </Offcanvas>
+  <Offcanvas.Header closeButton>
+    <Offcanvas.Title style={{fontSize: '180%'}}>Cart</Offcanvas.Title>
+  </Offcanvas.Header>
+  <Offcanvas.Body>
+    <Container>
+      <ProgressBar variant="secondary" now={33} />
+    </Container>
+    <br></br>
+    <Row style={{ padding: '0px 0px 0px 4%'}}>There are 0 items in your cart.</Row>
+    <br></br>
+    <br></br>
+    <Row style={{ padding: '0px 0px 0px 4%'}}>Subtotal</Row>
+    <br></br>
+    <Row style={{ padding: '0px 0px 0px 4%'}}>Shipping & Handling</Row> 
+    <br></br>
+    <Row style={{ padding: '0px 0px 0px 4%'}}>Sales Tax</Row>
+    <br></br>
+    <Row><strong>Estimated Total</strong></Row>
+    <br></br>
+    <Button variant="dark" size="md">
+      Checkout
+    </Button>
+  </Offcanvas.Body>
+</Offcanvas>
     </>
   )
 }
