@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import { useContext, useState } from 'react';
 import axios from 'axios';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
-import { Container, Row } from 'react-bootstrap';
-import pic from "../assets/pictures/stock-homepage.jpg";
+import { Container, Row, Button, Form} from 'react-bootstrap';
+import { UserContext } from '../components/UserContext';
+import Profile from './Profile';
 import './Account.css';
+
+import pic from "../assets/pictures/stock-homepage.jpg";
 
 const AccountLogin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const { setUser } = useContext(UserContext);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -21,7 +23,8 @@ const AccountLogin = () => {
             if (response.data === null) {
                 alert("Invalid email or password. Please try again.");
             } else {
-                alert("Login successful!");
+                console.log("Login successful!");
+                setUser(response.data);
             }
         } catch (error) {
             console.error(error);
@@ -48,9 +51,6 @@ const AccountLogin = () => {
                         <Form.Text className="button">
                             Don't have an account?
                             <Link to="/AccountCreation"><Button variant="link" className="custom-2">Create one here.</Button></Link>
-                        </Form.Text>
-                        <Form.Text className="button">
-                            <Link to="/AccountDisplay"><Button variant="link">.</Button></Link>
                         </Form.Text>
                     </Row>
                 </Form>

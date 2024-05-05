@@ -8,8 +8,11 @@ import Cart from './pages/Cart';
 import Search from './pages/Search';
 import AccountCreation from "./pages/Account Creation";
 
+import { UserProvider } from './components/UserProvider';
+
 function App() {
   return (
+    <UserProvider>
     <div className="App">
       <Router>
         <Routes>
@@ -23,6 +26,7 @@ function App() {
         </Routes>
       </Router>
     </div>
+    </UserProvider>
   );
 }
 

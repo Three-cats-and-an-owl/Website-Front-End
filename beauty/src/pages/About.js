@@ -33,6 +33,7 @@ const About = () => {
             </div>
             </Col>
             <Col></Col>
+            <Col></Col>
           </Row>
         </Container>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
