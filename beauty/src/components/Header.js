@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Container, Row } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import { useState } from 'react';
 
@@ -41,23 +41,39 @@ const Header = () => {
 
       <Offcanvas show={show} onHide={handleClose}>
   <Offcanvas.Header closeButton>
-    <Offcanvas.Title style={{fontSize: '180%'}}>Cart</Offcanvas.Title>
+    <Offcanvas.Title style={{fontSize: '180%', fontFamily: 'Baskerville'}}>Cart</Offcanvas.Title>
   </Offcanvas.Header>
   <Offcanvas.Body>
     <Container>
       <ProgressBar variant="secondary" now={33} />
     </Container>
     <br></br>
-    <Row style={{ padding: '0px 0px 0px 4%'}}>There are 0 items in your cart.</Row>
+    <Row>
+      <Col style={{ padding: '0px 0px 0px 4%', fontFamily: 'Baskerville'}}>There are 0 items in your cart.</Col>
+    </Row>
+    <hr></hr>
     <br></br>
     <br></br>
-    <Row style={{ padding: '0px 0px 0px 4%'}}>Subtotal</Row>
+    <Row>
+    <Col style={{ padding: '0px 0px 0px 4%', fontFamily: 'Baskerville'}}>Merchandise Subtotal</Col>
+    <Col align="right">$0.00</Col>
+    </Row>
     <br></br>
-    <Row style={{ padding: '0px 0px 0px 4%'}}>Shipping & Handling</Row> 
+    <Row>
+      <Col style={{ padding: '0px 0px 0px 4%', fontFamily: 'Baskerville'}}>Shipping & Handling</Col>
+      <Col align="right">$0.00</Col>
+    </Row>
     <br></br>
-    <Row style={{ padding: '0px 0px 0px 4%'}}>Sales Tax</Row>
+    <Row>
+      <Col style={{ padding: '0px 0px 0px 4%', fontFamily: 'Baskerville'}}>Sales Tax</Col>
+      <Col align="right">$0.00</Col>
+    </Row>
     <br></br>
-    <Row><strong>Estimated Total</strong></Row>
+    <hr></hr>
+    <Row>
+      <Col style={{ padding: '0px 0px 0px 4%', fontFamily: 'Baskerville'}}><strong>Estimated Total</strong></Col>
+      <Col align="right">$0.00</Col>
+    </Row>
     <br></br>
     <Button variant="dark" size="md">
       Checkout
