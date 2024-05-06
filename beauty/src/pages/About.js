@@ -14,7 +14,7 @@ const About = () => {
       exit={{ opacity: 0.5 }}
       transition={{ duration: 2 }}
     >
-    <div className="About" style={{ backgroundColor: '#D1C3B8', backgroundImage: `url(${pic})`, backgroundSize: 'cover'}}>
+    <div className="About" style={{ backgroundColor: '#D1C3B8', backgroundImage: `url(${pic})`, backgroundSize: 'cover', height: '100%'}}>
       <Header/>
         <Container>
         <br/><br/><br/><br/><br/>
