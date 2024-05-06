@@ -27,6 +27,10 @@
     background-color: #e4ddd580;
   }
 
+  .Inventory {
+    background: linear-gradient(to left, #E4DDD4, white);
+  }
+
   .sticky-pagination {
     position: fixed;
     bottom: 0;
