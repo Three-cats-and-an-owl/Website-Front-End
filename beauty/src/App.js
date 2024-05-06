@@ -39,8 +39,11 @@ import Search from './pages/Search';
 import AccountCreation from "./pages/Account Creation";
 import './App.css';
 
+import { UserProvider } from './components/UserContext';
+
 const App = () => {
   return (
+    <UserProvider>
     <Router>
       <Routes>
         <Route path="*" element={ 
@@ -60,6 +63,7 @@ const App = () => {
         } />
       </Routes>
     </Router>
+    </UserProvider>
   );
 };
 

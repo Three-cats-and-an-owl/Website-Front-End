@@ -17,7 +17,7 @@ const AccountLogin = () => {
         event.preventDefault();
 
         try {
-            const response = await axios.get('http://localhost:8080/api/v1/accounts', { email, password });
+            const response = await axios.post('http://localhost:8080/api/v1/accounts', { email, password });
             console.log(response.data);
 
             if (response.data === null) {
