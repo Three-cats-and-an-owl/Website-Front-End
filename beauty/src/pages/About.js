@@ -29,7 +29,7 @@ const About = () => {
               <br></br>
               <br></br>
               We understand that skincare is not a one size fits all, which is why we offer a diverse range
-              of productsdesigned to address specific needs, whether it's hydration, anti-aging, acne control, or brightening.
+              of products designed to address specific needs, whether it's hydration, anti-aging, acne control, or brightening.
             </div>
             </Col>
           </Row>
