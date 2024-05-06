@@ -60,6 +60,7 @@ import { Button } from 'react-bootstrap'
 import pic from '../assets/pictures/home_page_imageoverlay.jpg'
 import './Home.css'
 import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const Home = () => {
   const navigate = useNavigate()
@@ -69,18 +70,25 @@ const Home = () => {
   }
 
   return (
+    <motion.div
+      initial={{ opacity: 0.5 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0.5 }}
+      transition={{ duration: 2 }}
+    >
     <div className="home">
       <Header />
       <div className="landing">
         <img className="landing-image" src={pic} alt="First slide" style={{position: 'relative', top: 0, left: 0, height: '100vh', objectFit: 'cover'}}/>
         <div className="landing-caption">
-          <div className="t1">Skincare at its finest</div>
+          <div className="t1">Skincare at it's finest</div>
           <div className="t2">For all skin types and situations, we got you covered.</div>
           <Button variant="secondary" className="shop-button" onClick={goToShop}>Shop</Button>
         </div>
       </div>
       <Footer/>
     </div>
+    </motion.div>
   )
 }
 

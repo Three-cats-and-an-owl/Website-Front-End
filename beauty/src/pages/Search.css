@@ -18,6 +18,11 @@
     background-color: #564A44 !important;
     font-family: Baskerville !important;
   }
+  .cart-button:hover {
+    background-color:grey;
+    color: white;
+    box-shadow: 0 0 10px #9ecaed
+  }
 
   .featured {
     font-family: Arial;

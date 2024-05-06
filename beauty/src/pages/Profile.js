@@ -34,6 +34,7 @@ import React, { useContext } from 'react';
 import { UserContext } from '../components/UserContext';
 import { Container, Row, Col, ListGroup, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import axios from 'axios';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -93,6 +94,12 @@ const Profile = () => {
   }
 
   return (
+    <motion.div
+      initial={{ opacity: 0.5 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0.5 }}
+      transition={{ duration: 2 }}
+    >
     <div className="Profile">
       <Header />
         <Container>
@@ -136,6 +143,7 @@ const Profile = () => {
         </Container>
         <Footer />
     </div>
+    </motion.div>
   );
 };
 

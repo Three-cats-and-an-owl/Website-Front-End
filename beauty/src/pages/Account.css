@@ -215,3 +215,17 @@ button:hover {
     color: black !important;
     font-size: 300%;
 }
+
+.polish {
+    font-family: 'Baskerville' !important;
+    border: 0cap !important;
+    border-radius: 10px !important;
+    background-color: #e4ddd5 !important;
+    color: black !important;
+}
+
+.polish:hover {
+    background-color:grey;
+    color: white;
+    box-shadow: 0 0 10px #9ecaed
+}

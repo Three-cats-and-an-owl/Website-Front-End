@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { Container, Row, Button, Form} from 'react-bootstrap';
 import { UserContext } from '../components/UserContext';
+import { motion } from 'framer-motion';
 import './Account.css';
 
 import pic from "../assets/pictures/stock-homepage.jpg";
@@ -34,6 +35,12 @@ const AccountLogin = () => {
     };
 
     return (
+        <motion.div
+            initial={{ opacity: 0.5 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0.5 }}
+            transition={{ duration: 2 }}
+        >
         <Container className="body" style={{ backgroundImage: `url(${pic})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh', position: 'relative', padding: '0', margin: '0' }}>
             <Container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', position: 'absolute', top: '10vh', width: '100%' }}>
                 <Form onSubmit={handleSubmit}>
@@ -46,7 +53,7 @@ const AccountLogin = () => {
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="" value={password} onChange={e => setPassword(e.target.value)} />
                         </Form.Group>
-                        <Button variant="secondary" type="submit">
+                        <Button variant="secondary" className="polish" type="submit">
                             Submit
                         </Button>
                         
@@ -58,6 +65,7 @@ const AccountLogin = () => {
                 </Form>
             </Container>
         </Container>
+        </motion.div>
     );
 }
 

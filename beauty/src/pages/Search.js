@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Container, Form, Button, Card, Row, Col } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -27,6 +28,12 @@ const Search = () => {
     };
 
   return (
+    <motion.div
+      initial={{ opacity: 0.5 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0.5 }}
+      transition={{ duration: 2 }}
+    >
     <div className="search">
     <Header/>
     <br></br><br></br>
@@ -71,6 +78,7 @@ const Search = () => {
     </Container>
     <Footer />
     </div>
+    </motion.div>
   )
 }
 
