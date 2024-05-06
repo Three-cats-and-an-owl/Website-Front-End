@@ -72,7 +72,7 @@ const Home = () => {
     <div className="home">
       <Header />
       <div className="landing">
-        <img className="landing-image" src={pic} alt="First slide" />
+        <img className="landing-image" src={pic} alt="First slide" style={{position: 'relative', top: 0, left: 0, height: '100vh', objectFit: 'cover'}}/>
         <div className="landing-caption">
           <div className="t1">Skincare at its finest</div>
           <div className="t2">For all skin types and situations, we got you covered.</div>

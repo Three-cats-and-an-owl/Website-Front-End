@@ -37,6 +37,7 @@ import Account from './pages/Account';
 import Cart from './pages/Cart';
 import Search from './pages/Search';
 import AccountCreation from "./pages/Account Creation";
+import Profile from "./pages/Profile";
 import './App.css';
 
 import { UserProvider } from './components/UserContext';
@@ -57,6 +58,7 @@ const App = () => {
                 <Route path="/Cart" element={<Cart />} />
                 <Route path="/Search" element={<Search />} />
                 <Route path="/AccountCreation" element={<AccountCreation />} />
+                <Route path="/Profile" element={<Profile />} />
               </Routes>
             </CSSTransition>
           </TransitionGroup>

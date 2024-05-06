@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from '../components/Header';
-import './Search.css'
 import { Container, Row, Col, Card, Button, Pagination } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+
+import Header from '../components/Header';
+import './Search.css'
 
 const Inventory = () => {
   const [items, setItems] = useState([]);

@@ -38,7 +38,7 @@
     margin-top: 20px;
     font-family: Baskerville !important;
     font-size: 2rem !important;
-    background-color: #E4DDD5 !important;
+    background-color: #e4ddd5b9 !important;
     color: black !important;
     border-radius: 30px !important;
   }
@@ -50,7 +50,8 @@
   }
 
   .t1 {
-    font-size: 4rem;
+    font-size: 7rem;
+    justify-content: center;
     font-family: Baskersville;
     color: #E4DDD5;
 }

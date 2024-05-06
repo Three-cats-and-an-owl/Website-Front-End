@@ -1,9 +1,8 @@
 import { useContext, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Container, Row, Button, Form} from 'react-bootstrap';
 import { UserContext } from '../components/UserContext';
-import Profile from './Profile';
 import './Account.css';
 
 import pic from "../assets/pictures/stock-homepage.jpg";
@@ -13,11 +12,13 @@ const AccountLogin = () => {
     const [password, setPassword] = useState('');
     const { setUser } = useContext(UserContext);
 
+    let Navigate = useNavigate();
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8080/api/v1/accounts', { email, password });
+            const response = await axios.post('http://localhost:8080/api/v1/accounts/login', { email, password });
             console.log(response.data);
 
             if (response.data === null) {
@@ -25,6 +26,7 @@ const AccountLogin = () => {
             } else {
                 console.log("Login successful!");
                 setUser(response.data);
+                Navigate('/Profile');
             }
         } catch (error) {
             console.error(error);

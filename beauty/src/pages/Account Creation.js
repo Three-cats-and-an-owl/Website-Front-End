@@ -3,7 +3,7 @@ import axios from 'axios';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Row, Stack, Form, Button } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './Account.css';
 
 const LoginForm = () => (
@@ -30,19 +30,27 @@ const RegistrationForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  let navigate = useNavigate();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await axios.post('http://localhost:8080/api/v1/accounts', {
-      firstName, lastName, email, password
-    }, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
+    try {
+      const response = await axios.post('http://localhost:8080/api/v1/accounts/create', {
+        firstName, lastName, email, password
+      }, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const data = response.data;
+      console.log(data);
 
-    const data = response.data;
-    console.log(data);
+      navigate('/Account');
+      
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

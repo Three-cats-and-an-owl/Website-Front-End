@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Container, Form, Button, Card, Row, Col } from 'react-bootstrap';
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import './Search.css';
 
 const Search = () => {
@@ -68,6 +69,7 @@ const Search = () => {
         ))}
         </Row>
     </Container>
+    <Footer />
     </div>
   )
 }
