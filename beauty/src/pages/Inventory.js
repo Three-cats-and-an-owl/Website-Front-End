@@ -3,6 +3,7 @@ import axios from 'axios';
 import Header from '../components/Header';
 import './Search.css'
 import { Container, Row, Col, Card, Button, Pagination } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
 const Inventory = () => {
   const [items, setItems] = useState([]);
@@ -32,6 +33,12 @@ const Inventory = () => {
   };
 
   return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 2 }}
+    >
     <div className="Inventory">
       <Header/>
       <br></br>
@@ -86,6 +93,7 @@ const Inventory = () => {
         <Pagination.Next onClick={() => handlePageChange(currentPage + 1)} />
       </Pagination>
     </div>
+    </motion.div>
   );
 };
 

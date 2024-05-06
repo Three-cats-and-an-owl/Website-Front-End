@@ -1,4 +1,4 @@
-.t1 {
+/* .t1 {
     font-size: 4rem;
     font-family: Baskersville;
     color: #E4DDD5;
@@ -14,4 +14,49 @@
     height: 120vh;
     width: auto;
     object-fit: cover;
+}
+ */
+
+ .landing {
+    position: relative;
+  }
+  
+  .landing-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .landing-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .shop-button {
+    margin-top: 20px;
+    font-family: Baskerville !important;
+    font-size: 2rem !important;
+    background-color: #E4DDD5 !important;
+    color: black !important;
+    border-radius: 30px !important;
+  }
+
+  .shop-button:hover {
+    background-color:grey;
+    color: white;
+    box-shadow: 0 0 10px #9ecaed
+  }
+
+  .t1 {
+    font-size: 4rem;
+    font-family: Baskersville;
+    color: #E4DDD5;
+}
+
+.t2 {
+    font-size: 1.5rem;
+    font-family: Baskersville;
+    color: #E4DDD5;
 }
