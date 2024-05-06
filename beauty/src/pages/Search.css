@@ -26,3 +26,17 @@
     border-radius: 5px;
     background-color: #e4ddd580;
   }
+
+  .sticky-pagination {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+
+  .active-page.active .page-link {
+    background-color: #E4DDD5;
+    border-color: #E4DDD5;
+    color: black;
+  }
