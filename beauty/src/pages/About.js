@@ -32,7 +32,20 @@ const About = () => {
               of productsdesigned to address specific needs, whether it's hydration, anti-aging, acne control, or brightening.
             </div>
             </Col>
-            <Col></Col>
+          </Row>
+          <Row>
+            <div className="about-title">
+              Find us at
+            </div>
+            <Col>
+            <iframe
+                width="100%"
+                height="300"
+                style={{border:0}}
+                loading="lazy"
+                allowFullScreen
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDaLkaCo4YsTQmDgNYABNWE5lXAbxovGrw&q=18111+Nordhoff+St,+Northridge,+CA+91330">
+              </iframe></Col>
           </Row>
         </Container>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
